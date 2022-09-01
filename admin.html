@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+    <h1>View Orders</h1>
+    <table>
+        <tr>
+            <td>Item</td>
+            <td>Available Stock</td>
+            <td></td>
+        </tr>
+        {% for item in equipment %}
+            <tr>
+            <td>{{item[1]}}</td>
+            <td>{{item[2]}}</td>
+            <td>
+                <a href="/admindelete/{{item[0]}}">Delete</a>
+            </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
